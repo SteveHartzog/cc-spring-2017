@@ -1,0 +1,193 @@
+// Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
+
+@import '../node_modules/bootstrap/scss/_variables';
+
+// Core variables and mixins
+@import '../node_modules/bootstrap/scss/mixins';
+
+// Reset and dependencies
+@import '../node_modules/bootstrap/scss/normalize';
+// @import '../node_modules/bootstrap/scss/print';
+
+// Core CSS
+@import '../node_modules/bootstrap/scss/reboot';
+// @import '../node_modules/bootstrap/scss/type';
+// @import '../node_modules/bootstrap/scss/images';
+// @import '../node_modules/bootstrap/scss/code';
+// @import '../node_modules/bootstrap/scss/grid';
+// @import '../node_modules/bootstrap/scss/tables';
+// @import '../node_modules/bootstrap/scss/forms';
+@import '../node_modules/bootstrap/scss/buttons';
+
+// Components
+@import '../node_modules/bootstrap/scss/transitions';
+// @import '../node_modules/bootstrap/scss/dropdown';
+// @import '../node_modules/bootstrap/scss/button-group';
+// @import '../node_modules/bootstrap/scss/input-group';
+// @import '../node_modules/bootstrap/scss/custom-forms';
+@import '../node_modules/bootstrap/scss/nav';
+@import '../node_modules/bootstrap/scss/navbar';
+@import '../node_modules/bootstrap/scss/card';
+// @import '../node_modules/bootstrap/scss/breadcrumb';
+// @import '../node_modules/bootstrap/scss/pagination';
+// @import '../node_modules/bootstrap/scss/badge';
+// @import '../node_modules/bootstrap/scss/jumbotron';
+// @import '../node_modules/bootstrap/scss/alert';
+// @import '../node_modules/bootstrap/scss/progress';
+// @import '../node_modules/bootstrap/scss/media';
+// @import '../node_modules/bootstrap/scss/list-group';
+// @import '../node_modules/bootstrap/scss/responsive-embed';
+// @import '../node_modules/bootstrap/scss/close';
+
+// Components w/ jQuery Plugins
+// @import '../node_modules/bootstrap/scss/modal';
+// @import '../node_modules/bootstrap/scss/tooltip';
+// @import '../node_modules/bootstrap/scss/popover';
+// @import '../node_modules/bootstrap/scss/carousel';
+
+// Utility classes
+@import '../node_modules/bootstrap/scss/utilities';
+
+/* animate page transitions */
+section.au-enter-active {
+  -webkit-animation: fadeInRight 1s;
+  animation: fadeInRight 1s;
+}
+
+div.au-stagger {
+  /* 50ms will be applied between each successive enter operation */
+  -webkit-animation-delay: 50ms;
+  animation-delay: 50ms;
+}
+
+.card-container.au-enter {
+  opacity: 0;
+}
+
+.card-container.au-enter-active {
+  -webkit-animation: fadeIn 2s;
+  animation: fadeIn 2s;
+}
+
+body {
+  background: #383838;
+}
+
+section {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+h1, h2, h3 {
+  color: white;
+}
+
+$card-column-sizes: (
+    xs: 2,
+    sm: 3,
+    md: 4,
+    lg: 5,
+);
+
+@each $breakpoint-size, $column-count in $card-column-sizes {
+    @include media-breakpoint-up($breakpoint-size) {
+      .card-columns {
+        column-count: $column-count;
+        column-gap: 1.25rem;
+
+        .card {
+          display: inline-block;
+          width: 100%; // Don't let them exceed the column width
+        }
+      }
+    }
+}
+
+.card {
+  -webkit-border-radius: 10%;  
+  text-align: center;
+  padding: 0;
+  background: -webkit-linear-gradient(right top, #ad1977, #70448f);
+  color: rgb(136, 172, 217);
+  overflow: hidden;
+
+  .header-bg {
+    /* This stretches the canvas across the entire hero unit */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px #FFF solid;
+  }
+
+  .avatar {
+    position: relative;
+    margin-top: 15px;
+    z-index: 100;
+
+    img {
+      width: 100px;
+      height: 100px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      border: 2px #FFF solid;
+    }
+  }
+
+  .card-title {
+    a {
+      font-size: 18px;
+      color: white;
+    }
+    margin-bottom: 20px;
+  }
+}
+
+/* animation definitions */
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0)
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0)
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

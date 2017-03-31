@@ -2,7 +2,7 @@
 ## Introduction to Aurelia
 
 ## Get the Presentation
-- [Introduction_to_Aurelia.pdf](https://github.com/SteveHartzog/cc-spring-2017/edit/master/Introduction_to_Aurelia.pdf)
+- [Introduction_to_Aurelia.pdf](https://github.com/SteveHartzog/cc-spring-2017/blob/master/Introduction_to_Aurelia.pdf)
 
 ## Run It
 1. Run `npm i --no-progress` to get all the dependencies.

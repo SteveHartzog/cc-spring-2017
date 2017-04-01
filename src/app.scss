@@ -48,6 +48,10 @@
 // Utility classes
 @import '../node_modules/bootstrap/scss/utilities';
 
+body {
+  color: white;
+}
+
 /* animate page transitions */
 section.au-enter-active {
   -webkit-animation: fadeInRight 1s;

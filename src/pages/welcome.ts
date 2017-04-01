@@ -1,7 +1,7 @@
 export class Welcome {    
-  message: string;
+  name: string;
   
   constructor() {
-    this.message = 'Hello world';
+    this.name = 'Code Campers';
   }
 }

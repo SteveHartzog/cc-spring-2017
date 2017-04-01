@@ -1,3 +1,17 @@
 <template>
-  <h1>${message}</h1>
+  <h1>Welcome ${name}</h1>
+
+  <dd>
+    <dt>One-Time:
+    <dl><input id="name" value.one-time="name" /></dl>
+  </dd>
+  <dd>
+    <dt>One-way:
+    <dl><input id="name" value.one-way="name" /></dl>
+  </dd>
+    <dd>
+    <dt>Two-way (aka default bind):
+    <dl><input id="name" value.bind="name" /></dl>
+  </dd>
+
 </template>
